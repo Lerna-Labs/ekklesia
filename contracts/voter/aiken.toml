@@ -14,5 +14,3 @@ platform = "github"
 name = "aiken-lang/stdlib"
 version = "v2.2.0"
 source = "github"
-
-[config]
