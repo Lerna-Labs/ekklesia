@@ -1,0 +1,18 @@
+{
+  "name": "ekklesia-voter-contract",
+  "version": "1.0.0",
+  "description": "Demonstrates the use of the Ekklesia Voter Contract",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Adam Dean <adam@crypto2099.io>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@meshsdk/core": "^1.9.0-beta.37",
+    "dotenv": "^16.5.0",
+    "tsx": "^4.19.3"
+  },
+  "type": "module"
+}
