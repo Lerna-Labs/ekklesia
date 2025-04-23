@@ -1,0 +1,89 @@
+{
+  "preamble": {
+    "title": "ekklesia/voter",
+    "description": "Aiken contracts for project 'ekklesia/voter'",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.15+f03633e"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "vote.vote.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/vote~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "parameters": [
+        {
+          "title": "admin",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        }
+      ],
+      "compiledCode": "58d2010100229800aba2aba1aab9faab9eaab9dab9a9bae002488888896600264646644b30013370e900118039baa00189919912cc004cdc3a400060146ea800626644b300133001002375c601e601a6ea8c03cc034dd5001c528c4cc00400802900b1bac300d300e300e300e300e300e300e300e300e300b3754601a00e44646600200200644b30010018a508acc004cdc79bae30110010038a518998010011809000a01a404116402460160026016601800260106ea80062c8030c020004c020c024004c020004c010dd5004452689b2b20041",
+      "hash": "756b9d9258524e196f267e7e723d4e1e27b129a317904847155eb338"
+    },
+    {
+      "title": "vote.vote.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "parameters": [
+        {
+          "title": "admin",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        }
+      ],
+      "compiledCode": "58d2010100229800aba2aba1aab9faab9eaab9dab9a9bae002488888896600264646644b30013370e900118039baa00189919912cc004cdc3a400060146ea800626644b300133001002375c601e601a6ea8c03cc034dd5001c528c4cc00400802900b1bac300d300e300e300e300e300e300e300e300e300b3754601a00e44646600200200644b30010018a508acc004cdc79bae30110010038a518998010011809000a01a404116402460160026016601800260106ea80062c8030c020004c020c024004c020004c010dd5004452689b2b20041",
+      "hash": "756b9d9258524e196f267e7e723d4e1e27b129a317904847155eb338"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Data": {
+      "title": "Data",
+      "description": "Any Plutus data."
+    },
+    "aiken/crypto/VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
+    },
+    "vote/Datum": {
+      "title": "Datum",
+      "anyOf": [
+        {
+          "title": "Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "owner",
+              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+            },
+            {
+              "title": "vote",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

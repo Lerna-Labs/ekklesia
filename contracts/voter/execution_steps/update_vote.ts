@@ -2,7 +2,7 @@ import {drep, getScript, getTxBuilder, getUtxoByTxHash, wallet} from "./common.j
 import {Asset, deserializeAddress, mConStr0} from "@meshsdk/core";
 import * as crypto from "crypto";
 
-const known_tx_hash = '7f5a3901e5f4bc03db4ae4530f305b6009ca97e8841e13118a9731fd24b6d068';
+const known_tx_hash = '15f2d0fc473528509b9fa3dc655f405bfe22caef7b81029c5455be6cf377286c';
 
 async function main() {
     await drep.init();
